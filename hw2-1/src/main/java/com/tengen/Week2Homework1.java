@@ -24,8 +24,8 @@ public class Week2Homework1 {
         try {
             while (cursor.hasNext()) {
                 DBObject doc = cursor.next();
-                System.out.printf("student_id: expected[22], actual[%s]%n",
-                        doc.get("student_id"));
+                System.out.printf("score[%f], student_id: expected[22], actual[%s]%n",
+                        doc.get("score"), doc.get("student_id"));
             }
         } finally {
             cursor.close();
