@@ -1,0 +1,1 @@
+mongoimport -d students -c grades < grades.js
