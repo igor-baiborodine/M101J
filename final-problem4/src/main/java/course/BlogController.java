@@ -412,7 +412,7 @@ public class BlogController {
                     response.redirect("/post_not_found");
                 }
                 else {
-                    blogPostDAO.likePost(permalink, ordinal);
+                    blogPostDAO.likePost(post, ordinal);
 
                     response.redirect("/post/" + permalink);
                 }

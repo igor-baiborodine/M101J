@@ -109,13 +109,16 @@ public class BlogPostDAO {
                 new BasicDBObject("$push", new BasicDBObject("comments", comment)), false, false);
     }
 
-    public void likePost(final String permalink, final int ordinal) {
+    public void likePost(DBObject post, final int ordinal) {
 
-	// XXX Final Exam, Please work here
-	// Add code to increment the num_likes for the 'ordinal' comment
-	// that was clicked on.
-	// provided you use num_likes as your key name, no other changes should be required
-	// alternatively, you can use whatever you like but will need to make a couple of other 
-	// changes to templates and post retrieval code.
+        List<DBObject> comments = (List<DBObject>) post.get("comments");
+        DBObject comment = comments.get(ordinal);
+
+        int numLikes = (Integer) comment.get("num_likes");
+        comment.put("num_likes", ++numLikes);
+
+        String permalink = (String) post.get("permalink");
+        WriteResult result = postsCollection.update(new BasicDBObject("permalink", permalink),
+                new BasicDBObject("$set", new BasicDBObject("comments." + ordinal, comment)), false, false);
     }
 }
