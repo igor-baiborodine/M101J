@@ -19,7 +19,9 @@ public class Question7 {
         BasicDBObject query = new BasicDBObject();
         BasicDBObject fields = new BasicDBObject("_id", "1");
         DBCursor cursor = images.find(query, fields);
-        long processedCount = cursor.count();
+
+        long totalCount = cursor.count();
+        long processedCount = 0;
         long removedCount = 0;
 
         try {
@@ -32,15 +34,15 @@ public class Question7 {
 
                 if (album == null) {
                     images.remove(image);
-                    removedCount++;
+                    ++removedCount;
                     System.out.println("Removed image[" + image + "]");
                 }
-
+                ++processedCount;
             }
         } finally {
             cursor.close();
         }
-        System.out.println("Images count: processed[" + processedCount
-                + "], removed[" + removedCount + "]");
+        System.out.println("Processed[" + processedCount + "] of [" + totalCount
+                + "] images, removed[" + removedCount + "] images");
     }
 }
