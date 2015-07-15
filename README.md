@@ -1,5 +1,6 @@
 M101J
 ---------------
+[Certificate](https://s3.amazonaws.com/edu-cert.10gen.com/downloads/7dfcd9c50617446b9572e44a4aaefbba/Certificate.pdf)
 
 #####This project contains course materials and homework assignments for "M101J: MongoDB for Java Developers" course.#####
 * [MongoDB University Courses](https://university.mongodb.com/courses)
