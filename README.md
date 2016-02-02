@@ -4,6 +4,9 @@ M101J
 
 #####This project contains course materials and homework assignments for "M101J: MongoDB for Java Developers" course.#####
 * [MongoDB University Courses](https://university.mongodb.com/courses)
+ 
+######Related projects:
+* [JPetStore-6 with MongoDB/Java Driver](https://github.com/igor-baiborodine/java-various-examples/tree/master/jpetstore-6-mongodb)
 
 ######Technologies and software used:######
 * [Java SE 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
