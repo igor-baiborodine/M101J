@@ -6,7 +6,7 @@ M101J
 * [MongoDB University Courses](https://university.mongodb.com/courses)
  
 ######Related projects:
-* [JPetstore-6 with MongoDB/Spring Data](https://github.com/igor-baiborodine/jpetstore-6-spring-data-mongodb)
+* [JPetStore-6 with MongoDB/Spring Data](https://github.com/igor-baiborodine/jpetstore-6-spring-data-mongodb)
 * [JPetStore-6 with MongoDB/Java Driver](https://github.com/igor-baiborodine/java-various-examples/tree/master/jpetstore-6-mongodb)
 
 ######Technologies and software used:######
